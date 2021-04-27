@@ -5,7 +5,6 @@ const router = express.Router();
 
 
 router.get('/test', function(req, res, next) {
-    //return_string = string_to_cut.slice(string_to_cut % 3 == 2);
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.send({
@@ -15,7 +14,7 @@ router.get('/test', function(req, res, next) {
 });
 
 router.post('/test',(req, res, next) => {
-        console.log(req.body.return_string);
+        console.log(req.body.return_string); 
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.status(201).json(req.body.return_string);
